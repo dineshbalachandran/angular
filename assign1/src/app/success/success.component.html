@@ -1,0 +1,16 @@
+<p>success </p><app-warnings></app-warnings> <p>works!</p>
+<hr>
+<p>{{ addSuccessMessage }}</p>
+<p>{{ successName }}</p>
+<p>{{ twoWay }}</p>
+<input type="text"
+    class="form-control"
+    (input)="onUpdateSuccess($event)"/>
+
+<input type="text"
+    class="form-control"
+    [(ngModel)]="twoWay"/>   
+
+<button class="btn btn-primary" 
+        [disabled]="!allowNewSuccess"
+        (click)="onAddSuccess()">Add success</button>
